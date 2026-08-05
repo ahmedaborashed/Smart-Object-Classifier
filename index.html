@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Object Classifier</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<div class="container">
+
+<header>
+
+<h1>🤖 Smart Object Classifier</h1>
+
+<p>AI Camera Detection using TensorFlow.js</p>
+
+</header>
+
+<div class="grid">
+
+<div class="left">
+
+<div class="card">
+
+<h2>📷 Live Camera</h2>
+
+<div id="webcam-container">
+
+<div class="placeholder">
+
+Camera Not Started
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button id="startBtn">
+
+▶ Start Camera
+
+</button>
+
+<button id="captureBtn">
+
+🔍 Detect
+
+</button>
+
+<label class="uploadBtn">
+
+📁 Upload Image
+
+<input
+type="file"
+id="uploadImage"
+accept="image/*">
+
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<div class="card">
+
+<h2>Prediction</h2>
+
+<div id="prediction">
+
+Waiting...
+
+</div>
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+<div id="accuracy">
+
+0%
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>All Classes</h2>
+
+<div id="label-container"></div>
+
+</div>
+
+<div class="card">
+
+<h2>History</h2>
+
+<ul id="history"></ul>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+Built with DR/Ahmed Sherif
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
